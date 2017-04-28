@@ -1,0 +1,20 @@
+<ul>
+    <li class="card">
+        <div class="panel-body">
+            <div class="photo">
+                <img [src]="carPart.image"/>
+            </div>
+            <table class="product-info">
+                <tr>
+                    <td>
+                        <h2>{{ carPart.name | uppercase }}</h2>
+                        <p class="description">{{carPart.description}}</p>
+                        <p class="inventory" *ngIf="carPart.inStock > 0">{{carPart.inStock}} in Stock</p>
+                        <p class="inventory" *ngIf="carPart.inStock === 0">Out of Stock</p>
+                    </td>
+                    <td class="price">{{carPart.price | currency:'EUR':true}}</td>
+                </tr>
+            </table>
+        </div>
+    </li>
+</ul>

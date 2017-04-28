@@ -1,0 +1,19 @@
+<h2>Guest Book</h2>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <label for="id">아이디</label>
+    <input type="text" name="id" ngModel #id required/><br/>
+
+    <label for="password">비밀번호</label>
+    <input type="password" name="password" ngModel #password required/><br/>
+
+    <label for="desc">남길 말</label>
+    <input type="text" name="desc" ngModel #desc required/><br/>
+
+    <button type="submit">등록</button><br/><br/>
+
+    <div>
+        <div [innerText]="'guestBookID :' + id.value"></div>
+        <div [innerText]="'Password :' + password.value"></div>
+        <div [innerText]="'Desc :' + desc.value"></div>
+    </div>
+</form>

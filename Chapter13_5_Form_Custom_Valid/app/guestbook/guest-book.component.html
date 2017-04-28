@@ -1,0 +1,37 @@
+<h2>Guest Book</h2>
+<form [formGroup]="guestForm" #f (ngSubmit)="onSubmit(f)">
+    <label for="id">아이디</label>
+    <input id="id" type="text" name="id" formControlName="id"/><br/>
+    <div *ngIf="guestForm.controls['id'].touched" [hidden]="guestForm.controls['id'].errors.valid">
+        {{guestForm.controls['id'].errors.errorMsg}}
+    </div>
+
+    <label for="password">비밀번호</label>
+    <input id="password" type="password" name="password" formControlName="password"/><br/>
+    <div *ngIf="guestForm.controls['password'].touched && guestForm.controls['password'].errors" [hidden]="guestForm.controls['password'].valid">
+        <div *ngIf="guestForm.controls['password'].errors.required">
+            비밀번호를 입력하세요
+        </div>
+
+        <div *ngIf="guestForm.controls['password'].errors.minlength">
+            비밀번호를 3글자 이상 입력하세요
+        </div>
+
+        <div *ngIf="guestForm.controls['password'].errors.maxlength">
+            비밀번호를 20글자 이하로 입력하세요
+        </div>
+
+    </div>
+
+    <label for="desc">남길 말</label>
+    <input id="desc" type="text" name="desc" formControlName="desc" /><br/>
+    <div *ngIf="guestForm.controls['desc'].touched" [hidden]="guestForm.controls['desc'].valid">내용을 입력하세요</div>
+
+    <button type="submit">등록</button><br/><br/>
+
+    <div>
+        <div [innerText]="'guestBookID :' + guestForm.controls['id'].value"></div>
+        <div [innerText]="'Password :' + guestForm.controls['password'].value"></div>
+        <div [innerText]="'Desc :' + guestForm.controls['desc'].value"></div>
+    </div>
+</form>

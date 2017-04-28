@@ -1,0 +1,1 @@
+{"version":3,"file":"car-part.routes.js","sourceRoot":"","sources":["car-part.routes.ts"],"names":[],"mappings":";;AAIA,0CAAuD;AACvD,2DAAyD;AACzD,yEAAqE;AAGxD,QAAA,eAAe,GAAW;IACnC;QACI,IAAI,EAAE,SAAS;QACf,SAAS,EAAE,sCAAiB;QAC5B,QAAQ,EAAE;YACN,EAAE,IAAI,EAAE,qBAAqB,EAAE,SAAS,EAAE,kDAAsB,EAAE;SACrE;KACJ;CAEJ,CAAC;AAEW,QAAA,oBAAoB,GAAuB,qBAAY,CAAC,QAAQ,CAAC,uBAAe,CAAC,CAAC"}
